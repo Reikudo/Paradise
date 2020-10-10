@@ -370,6 +370,9 @@
 
 	update_ambience_pref()
 
+	if(!geoip)
+		geoip = new(src, address)
+
 	//This is down here because of the browse() calls in tooltip/New()
 	if(!tooltips)
 		tooltips = new /datum/tooltip(src)
