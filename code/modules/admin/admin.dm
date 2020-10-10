@@ -128,6 +128,7 @@ GLOBAL_VAR_INIT(nologevent, 0)
 		body += "<A href='?_src_=holder;randomizename=[M.UID()]'>Randomize Name</A> | "
 		body += "<A href='?_src_=holder;shownoteckey=[M.ckey]'>Notes</A> | "
 		body += "<A href='?_src_=holder;viewkarma=[M.ckey]'>View Karma</A> | "
+		body += "<A href='?_src_=holder;geoip=[M.UID()]'>GeoIP</A> | "
 		if(config.forum_playerinfo_url)
 			body += "<A href='?_src_=holder;webtools=[M.ckey]'>WebInfo</A> | "
 	if(M.client)
