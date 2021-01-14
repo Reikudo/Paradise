@@ -281,6 +281,10 @@
 	var/respawn_delay_drone = 10
 	var/respawn_observer = FALSE
 
+	var/restrict_maint = 0
+
+	var/full_day_logs = FALSE
+
 /datum/configuration/New()
 	for(var/T in subtypesof(/datum/game_mode))
 		var/datum/game_mode/M = T
@@ -790,6 +794,12 @@
 				if ("respawn_delay_drone")
 					config.respawn_delay_drone = text2num(value)
 					config.respawn_delay_drone = config.respawn_delay_drone > 0 ? config.respawn_delay_drone : 0
+
+				if ("restrict_maint")
+					config.restrict_maint = text2num(value)
+
+				if ("full_day_logs")
+					config.full_day_logs = TRUE
 
 				else
 					log_config("Unknown setting in configuration: '[name]'")
